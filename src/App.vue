@@ -5,13 +5,13 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 
 import FooterComponent from '@/components/FooterComponent.vue'
 
-import BodyComponent from '@/components/BodyComponent.vue'
+import MainComponent from '@/components/MainComponent.vue'
 
 </script>
 
 <template>
     <HeaderComponent></HeaderComponent>
-    <BodyComponent></BodyComponent>
+    <MainComponent></MainComponent>
     <FooterComponent></FooterComponent>
 
 
