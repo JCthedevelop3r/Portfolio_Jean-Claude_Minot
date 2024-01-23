@@ -1,23 +1,32 @@
 <script setup>
 
+import ModalCV1 from '@/components/modals/ModalCV1.vue'
 
 </script>
 
 <template>
+
     <main>
+
+        
+
         <!-- courte présentation -->
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
             Proin consectetur, tortor at faucibus convallis, lorem nulla iaculis turpis, eget interdum est felis quis libero. 
             Proin blandit fermentum est eu condimentum.
         </p>
+        
+        <ModalCV1></ModalCV1>
+        
         <section class="main__section1">
             <article class="section__article1">
                 <h2 class="article1__h2">Mon CV</h2>
-                <div>
+                <div class="article1__div">
                     <figure class="article1__figure1">
                         <img src="../assets/images/Screen_Devoir_CV.png" alt="Curriculum vitae d'un développeur web junior" class="article1__cv"/>
                     </figure>
+                    
                     <figure class="article1__figure2">
                         <img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="article1__logo"/>
                     </figure>
@@ -27,7 +36,7 @@
 
             <article class="section__article2">
                 <h2 class="article2__h2">Cahier des charges "La Socketterie"</h2>
-                <div>
+                <div class="article2__div">
                     <figure class="article2__figure1">
                         <img src="../assets/images/Screen_Devoir_Cahier_des_Charges.png" alt="Cahier des charges" class="article2__cdc"/>
                     </figure>
@@ -40,7 +49,7 @@
 
             <article class="section__article3">
                 <h2 class="article3__h2">Dynamiser un espace commentaire</h2>
-                <div>
+                <div class="article3__div">
                     <figure class="article3__figure1">
                         <img src="../assets/images/Screen_Devoir_Dynamiser_Espace_commentaire.png" alt="Espace commentaire d'un site web" class="article3__esp-com"/>
                     </figure>
@@ -112,7 +121,19 @@
     
     }
 
-    div {
+    .article1__div {
+    
+    display: flex;
+    
+    }
+
+    .article2__div {
+    
+    display: flex;
+    
+    }
+
+    .article3__div {
     
     display: flex;
     
