@@ -17,6 +17,12 @@ import MainComponent from '@/components/MainComponent.vue'
 
 </template>
 
-<style scoped>
+<style>
+
+    body {
+    
+        margin: 20px 300px 8px 300px;
+    
+    }
 
 </style>

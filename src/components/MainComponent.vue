@@ -53,6 +53,8 @@
 
         </section>
 
+        <h2 class="contact">Me contacter</h2>
+
         <section class="main__section2">
 
             <!--texte de remerciements-->
@@ -62,16 +64,24 @@
                 Proin blandit fermentum est eu condimentum.
             </p>
 
+            
+
             <form action="#" method="post">
 
-                <label for="name">Prénom : </label>
-                <input type="text" name="firsname" id="firstname">
+                <div>
+                    <label for="firstname">Prénom : </label>
+                    <input type="text" name="firsname" id="firstname">
+                </div>
 
-                <label for="name">Nom : </label>
-                <input type="text" name="lastname" id="lastname">
+                <div>
+                    <label for="lastname" id="label-lastname">Nom : </label>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
 
-                <label for="object">Objet :</label>
-                <input type="text" name="object" id="object">
+                <div>
+                    <label for="object" id="label-object">Objet :</label>
+                    <input type="text" name="object" id="object">
+                </div>
 
                 <textarea placeholder="Bonjour, je suis intéressé par votre profil..."></textarea>
 
@@ -218,19 +228,85 @@
     .main__section2 {
     
     display: flex;
-    height: 850px; 
+    justify-content: space-evenly;
+    height: 800px; 
+    border: 2px solid blue;
     
     }
 
     .section2__p {
     
-        width: 656.5px;
+        width: 400px;
+        height: 500px;
+        align-self: center;
+        border: 2px solid red;
     
     }
 
     form {
     
-        width: 656.5px;
+        width: 400px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        border: 2px solid red;
+    }
+
+    #firstname {
+    
+    margin: 0 0 0 20px;
+    width: 313px;
+    
+    }
+
+    #lastname {
+    
+    width: 313px;
+    
+    }
+
+    #object {
+    
+    width: 313px;
+    
+    }
+
+    #label-lastname {
+    
+        margin-right: 38px;
+    
+    }
+
+    #label-object {
+    
+        margin-right: 34px;
+    
+    }
+
+    form div {
+    
+        margin-bottom: 20px;
+    
+    }
+
+    textarea {
+    
+        height: 320px;
+        margin-bottom: 10px;
+    
+    }
+
+    #submit-button {
+    
+        height: 40px;
+    
+    }
+
+    .contact {
+    
+        margin: 10px 0 10px 0;
+        padding-left: 735px;
     
     }
 </style>
