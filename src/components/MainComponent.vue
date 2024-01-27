@@ -1,14 +1,36 @@
 <script setup>
 
-import ModalCV1 from '@/components/modals/ModalCV1.vue'
+import ModalCV1 from '@/components/modals/ModalCV1.vue';
+
+import { ref } from 'vue';
+
+//Code pour la ModalCV1
+const isModalOpenCV1 = ref(false);
+
+const openModalCV1 = () => {
+    isModalOpenCV1.value = true;
+};
+
+const closeModalCV1 = () => {
+    isModalOpenCV1.value = false;
+};
+
+//Code pour la ModalCV2
+const isModalOpenCV2 = ref(false);
+
+const openModalCV2 = () => {
+    isModalOpenCV2.value = true;
+};
+
+const closeModalCV2 = () => {
+    isModalOpenCV2.value = false;
+};
 
 </script>
 
 <template>
 
     <main>
-
-        
 
         <!-- courte présentation -->
         <p>
@@ -17,21 +39,41 @@ import ModalCV1 from '@/components/modals/ModalCV1.vue'
             Proin blandit fermentum est eu condimentum.
         </p>
         
-        <ModalCV1></ModalCV1>
+        <ModalCV1 v-if="isModalOpenCV1">
+            <button class="close-button-modal-cv" @click="closeModalCV1">X</button>
+            <h1>Voici du contenu</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
+            </p>
+            <button class="close-modal-cv-1" @click="closeModalCV1">fermer</button>
+        </ModalCV1>
+
+        <div class="modal-container-cv" v-if="isModalOpenCV2">
+            <div class="overlay-cv" @click="closeModalCV2">
+                <div class="modal-cv">
+                    <button @click="closeModal" class="close-button-modal-cv">X</button>
+                    <h1>Voici du contenu</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        
         
         <section class="main__section1">
             <article class="section__article1">
                 <h2 class="article1__h2">Mon CV</h2>
                 <div class="article1__div">
                     <figure class="article1__figure1">
-                        <img src="../assets/images/Screen_Devoir_CV.png" alt="Curriculum vitae d'un développeur web junior" class="article1__cv"/>
+                        <img src="../assets/images/Screen_Devoir_CV.png" alt="Curriculum vitae d'un développeur web junior" class="article1__cv" @click="openModalCV1"/>
                     </figure>
                     
                     <figure class="article1__figure2">
                         <img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="article1__logo"/>
                     </figure>
                 </div>
-                <button>En savoir plus</button>
+                <button @click="openModalCV2">En savoir plus</button>
             </article>
 
             <article class="section__article2">
@@ -328,6 +370,63 @@ import ModalCV1 from '@/components/modals/ModalCV1.vue'
     
         margin: 10px 0 10px 0;
         padding-left: 735px;
+    
+    }
+
+    .close-button-modal-cv {
+    
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+    }
+
+    /*Style des fenêtres modales "En savoir plus".*/
+
+    .modal-container-cv {
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    } 
+
+    .overlay-cv {
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #333333d3;
+
+    }
+
+    .modal-cv {
+
+    width: 450px;
+    height: 250px;
+    border-radius: 5px;
+    position: absolute;
+    top: 25%;
+    left: 39%;
+    background: white;
+    border: 2px solid red;
+
+    }
+
+    .close-modal-cv-1 {
+    
+    height: 752px;
+    width: 555px;
+    position: absolute;
+    top: -97%;
+    left: -150%;
+    opacity: 0;
     
     }
 </style>
