@@ -19,6 +19,7 @@
     width: 1300px;
     height: 800px;
     position: absolute;
+    top: 230%;
     border: 2px solid blue;
 
 } 
@@ -29,7 +30,7 @@
     height: 250px;
     border-radius: 5px;
     position: relative;
-    top: 40%;
+    top: 36%;
     left: 56%;
     background: white;
     border: 2px solid red;
