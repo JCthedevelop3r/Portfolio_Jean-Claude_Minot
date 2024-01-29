@@ -1,5 +1,6 @@
 <script setup>
 
+import { RouterLink, RouterView } from 'vue-router'
 
 </script>
 
@@ -8,16 +9,13 @@
         <a href="#pdp"><img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="pdp"/></a>
         <div class="name-and-menu">
             <h1>Minot Jean-Claude</h1>
-
-            <nav>
-                <ul>
-                    <a href="#presentation"><li>À propos de moi</li></a>
-                    <a href="#"><li>CV</li></a>
-                    <a href="#"><li>Cahier des charges</li></a>
-                    <a href="#"><li>Espace commentaire</li></a>
-                    <a href="#"><li>Me contacter</li></a>
-                </ul>
-            </nav>
+            <div id="nav">
+                <router-link to="/About">À propos de moi</router-link>
+                <router-link to="/CV">CV</router-link>
+                <router-link to="/CDC">Cahier des charges</router-link>
+                <router-link to="/EspCom">Espace commentaire</router-link>
+                <router-link to="/Form">Me contacter</router-link>
+            </div>
         </div>
     </header>
 </template>
