@@ -81,7 +81,7 @@ const closeModalEspCom2 = () => {
     <main>
 
         <!-- courte présentation -->
-        <p>
+        <p id="presentation">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
             Proin consectetur, tortor at faucibus convallis, lorem nulla iaculis turpis, eget interdum est felis quis libero. 
             Proin blandit fermentum est eu condimentum.
@@ -241,6 +241,7 @@ const closeModalEspCom2 = () => {
 
 <style scoped>
 
+    /*STYLE DE LA SECTION 1*/
     .article1__h2 {
     
     padding-left: 295px;
@@ -386,7 +387,9 @@ const closeModalEspCom2 = () => {
     flex-direction: column;
     
     }
+    /*STYLE DE LA SECTION 1*/
 
+    /*STYLE DE LA SECTION 2*/
     .main__section2 {
     
     display: flex;
@@ -471,20 +474,9 @@ const closeModalEspCom2 = () => {
         padding-left: 735px;
     
     }
+    /*STYLE DE LA SECTION 2*/
 
-    .close-button-modals {
-    
-        width: 30px;
-        height: 30px;
-        border: none;
-        border-radius: 5px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-
-    }
-
-    /*Style de la fenêtre modale "En savoir plus" du CV*/
+    /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DU CV*/
 
     .modal-container-cv {
 
@@ -518,9 +510,9 @@ const closeModalEspCom2 = () => {
 
     }
 
-    /*Style de la fenêtre modale "En savoir plus" du CV*/
+    /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DU CV*/
 
-    /*Style de la fenêtre modale "En savoir plus" du Cahier des charges*/
+    /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DU CAHIER DES CHARGES*/
 
     .modal-container-cdc {
 
@@ -554,9 +546,9 @@ const closeModalEspCom2 = () => {
 
     }
 
-    /*Style de la fenêtre modale "En savoir plus" du Cahier des charges*/
+    /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DU CAHIER DES CHARGES*/
 
-    /*Style de la fenêtre modale "En savoir plus" de l'Espace commentaire*/
+    /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DE L'ESPACE COMMENTAIRE*/
 
     .modal-container-esp-com {
 
@@ -590,8 +582,20 @@ const closeModalEspCom2 = () => {
 
     }
 
-    /*Style de la fenêtre modale "En savoir plus" de l'Espace commentaire*/
+    /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DE L'ESPACE COMMENTAIRE*/
+    
+    .close-button-modals {
+    
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
 
+    }
+    
     .close-modal-cv-1 {
     
     height: 752px;
@@ -599,7 +603,7 @@ const closeModalEspCom2 = () => {
     position: absolute;
     top: -97%;
     left: -150%;
-    opacity: 0.5;
+    opacity: 0;
     
     }
 
@@ -610,7 +614,7 @@ const closeModalEspCom2 = () => {
     position: absolute;
     top: -100%;
     left: -155%;
-    opacity: 0.5;
+    opacity: 0;
 
     }
 
@@ -621,7 +625,13 @@ const closeModalEspCom2 = () => {
     position: absolute;
     top: -95%;
     left: -155%;
-    opacity: 0.5;
+    opacity: 0;
 
+    }
+
+    #presentation {
+    
+        font-family: 'Bohemian Soul', serif;
+    
     }
 </style>

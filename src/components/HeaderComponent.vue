@@ -5,46 +5,83 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
+    <div id="header-ancre"></div>
     <header>
-        <a href="#pdp"><img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="pdp"/></a>
-        <div class="name-and-menu">
-            <h1>Minot Jean-Claude</h1>
-            <div id="nav">
-                <router-link to="/About">À propos de moi</router-link>
-                <router-link to="/CV">CV</router-link>
-                <router-link to="/CDC">Cahier des charges</router-link>
-                <router-link to="/EspCom">Espace commentaire</router-link>
-                <router-link to="/Form">Me contacter</router-link>
-            </div>
-        </div>
+            <a href="#header-ancre"><img src="../assets/images/../images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade"/></a>
+            <nav class="menu">
+                <ul>
+                    <a href="#"><li>À propos de moi</li></a>
+                    <a href="#"><li>Mon CV</li></a>
+                    <a href="#"><li>Cahier des charges</li></a>
+                    <a href="#"><li>Espace commentaire</li></a>
+                    <a href="#"><li>Me contacter</li></a>
+                </ul>
+            </nav>
     </header>
 </template>
 
 <style scoped>
 
-.pdp {
+#header-ancre {
 
-height: 200px;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 0;
 
 }
 
 header {
 
-display: flex;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #ecdcc5ff;
 
 }
 
-.name-and-menu {
+img {
 
-display: flex;
-flex-direction: column;
+    height: 60px;
+    padding: 10px;
 
+}
+
+.menu {
+
+    width: 1183px;
+
+}
+
+ul {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+a {
+
+    /*display: flex;
+    justify-content: center;
+    width: 170.5px;*/
 }
 
 li {
 
-display: inline-block;
+    display: inline-block;
+    padding: 10px;
+    font-family: 'Helvetica', 'sans-serif';
+    font-weight: bold;
+    color: #ca9f6afe;
+    
 
 }
 
+li:hover{
+
+    
+    text-decoration: underline;
+
+}
 </style>
