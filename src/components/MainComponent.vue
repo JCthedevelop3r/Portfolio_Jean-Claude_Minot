@@ -82,9 +82,7 @@ const closeModalEspCom2 = () => {
 
         <!-- courte présentation -->
         <p id="presentation">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
-            Proin consectetur, tortor at faucibus convallis, lorem nulla iaculis turpis, eget interdum est felis quis libero. 
-            Proin blandit fermentum est eu condimentum.
+            Bonjour,<br/><br/> Je suis Jean-Claude Minot,<br/><br/> Développeur Web Junior.
         </p>
         <!-- courte présentation -->
 
@@ -120,7 +118,7 @@ const closeModalEspCom2 = () => {
                     </figure>
                     
                     <figure class="article1__figure2">
-                        <img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="article1__logo"/>
+                        <img src="../assets/images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade" class="article1__logo"/>
                     </figure>
                 </div>
                 <button @click="openModalCV2">En savoir plus</button>
@@ -156,7 +154,7 @@ const closeModalEspCom2 = () => {
                         <img src="../assets/images/Screen_Devoir_Cahier_des_Charges.png" alt="Cahier des charges" class="article2__cdc" @click="openModalCDC1"/>
                     </figure>
                     <figure class="article2__figure2">
-                        <img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="article2__logo"/>
+                        <img src="../assets/images/Logo_Cascade_JCthedevelop3r.png" alt="Logo en forme de cascade turquoise" class="article2__logo"/>
                     </figure>
                 </div>
                 <button @click="openModalCDC2">En savoir plus</button>
@@ -192,7 +190,7 @@ const closeModalEspCom2 = () => {
                         <img src="../assets/images/Screen_Devoir_Dynamiser_Espace_commentaire.png" alt="Espace commentaire d'un site web" class="article3__esp-com" @click="openModalEspCom1"/>
                     </figure>
                     <figure class="article3__figure2">
-                        <img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="article3__logo"/>
+                        <img src="../assets/images/Logo_Cascade_JCthedevelop3r.png" alt="Logo en forme de cascade turquoise" class="article3__logo"/>
                     </figure>
                 </div>
                 <button @click="openModalEspCom2">En savoir plus</button>
@@ -241,116 +239,142 @@ const closeModalEspCom2 = () => {
 
 <style scoped>
 
+    #presentation {
+    
+        font-family: 'Bohemian Soul', serif;
+        font-size: 4rem;
+        height: 670px;
+    
+    }
+
     /*STYLE DE LA SECTION 1*/
     .article1__h2 {
     
-    padding-left: 295px;
+        padding-left: 183px;
+        margin: 0;
+        font-family: 'Arial', 'sans-serif';
+        font-weight: 900;
+        font-size: 2rem;
+        color: black;
     
     }
 
     .article2__h2 {
     
-    padding-left: 170px;
+        padding: 40px 0 10px 0px;
+        margin: 0;
+        font-family: 'Arial', 'sans-serif';
+        font-weight: 900;
+        font-size: 2rem;
+        color: black;
     
     }
 
     .article3__h2 {
     
-    padding-left: 170px;
+       padding: 40px 0 10px 0px;
+        margin: 0;
+        font-family: 'Arial', 'sans-serif';
+        font-weight: 900;
+        font-size: 2rem;
+        color: black;
     
     }
 
     .article1__div {
     
-    display: flex;
+        display: flex;
     
     }
 
     .article2__div {
     
-    display: flex;
+        display: flex;
     
     }
 
     .article3__div {
     
-    display: flex;
+        display: flex;
     
     }
     
     .article1__figure1 {
 
-    width: 600px;
-    height: 750px;
-    
+        width: 555px;
+        height: 670px;
+        margin: 0 0 15px 0;
     }
 
     .article1__cv {
     
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border: 2px solid red;
+        height: 100%;
+        width: 89%;
+        object-fit: contain;
+        padding: 5px 5px 5px 0;
+        border-radius: 25px;
     
     }
 
     .article2__figure1 {
 
-    width: 600px;
-    height: 750px;
+        width: 555px;
+        height: 670px;
+        margin: 0 0 15px 0;
     
     }
     
     .article2__cdc  {
     
         height: 100%;
-        width: 100%;
+        width: 89%;
         object-fit: cover;
-        border: 2px solid red;
+        border-radius: 25px;
     
     }
 
     .article3__figure1 {
 
-    width: 600px;
-    height: 750px;
+    width: 555px;
+    height: 670px;
+    margin: 0 0 15px 0;
     
     }
 
     .article3__esp-com {
     
         height: 100%;
-        width: 100%;
+        width: 89%;
         object-fit: cover;
-        border: 2px solid red;
+        border-radius: 25px;
     
     }
 
     .article1__figure2  {
     
-        height: 200px;
-        width: 150px;
-        margin-left: 241.47px;
-        margin-right: 241.47px;
+        height: 150px;
+        width: 100px;
+        margin-left: 440px;
+        margin-right: 240px;
         align-self: center;
     
     }
 
     .article2__figure2 {
     
-        height: 200px;
-        width: 150px;
-        margin-left: 241.47px;
-        margin-right: 241.47px;
+        height: 150px;
+        width: 100px;
+        margin-left: 440px;
+        margin-right: 240px;
         align-self: center;
     }
 
     .article3__figure2 {
     
-        height: 200px;
-        width: 150px;
-        margin-left: 241.47px;
-        margin-right: 241.47px;
+        height: 150px;
+        width: 100px;
+        margin-left: 440px;
+        margin-right: 240px;
         align-self: center;
     }
 
@@ -376,8 +400,14 @@ const closeModalEspCom2 = () => {
 
     button {
     
-    width: 600px;
+    width: 495px;
     height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Helvetica', 'sans-serif';
+    font-weight: bold;
+    color: black;
+    background-color: #31fffbff;
     
     }
 
@@ -598,40 +628,35 @@ const closeModalEspCom2 = () => {
     
     .close-modal-cv-1 {
     
-    height: 752px;
-    width: 555px;
+    height: 667px;
+    width: 492px;
     position: absolute;
-    top: -97%;
-    left: -150%;
-    opacity: 0;
+    top: -27%;
+    left: -101%;
+    opacity: 0.5;
     
     }
 
     .close-modal-cdc-1 {
     
-    height: 752px;
-    width: 600px;
+    height: 675px;
+    width: 500px;
     position: absolute;
-    top: -100%;
-    left: -155%;
-    opacity: 0;
+    top: -31%;
+    left: -101%;
+    opacity: 0.5;
 
     }
 
     .close-modal-esp-com-1 {
     
-    height: 752px;
-    width: 600px;
+    height: 675px;
+    width: 500px;
     position: absolute;
-    top: -95%;
-    left: -155%;
-    opacity: 0;
+    top: -27%;
+    left: -101%;
+    opacity: 0.5;
 
     }
 
-    #presentation {
-    
-        font-family: 'Bohemian Soul', serif;
-    
-    }
 </style>

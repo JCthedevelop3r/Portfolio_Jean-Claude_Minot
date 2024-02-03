@@ -16,21 +16,20 @@
 
 .modal-container {
 
-    width: 1300px;
+    width: 1400px;
     height: 800px;
     position: absolute;
-    border: 2px solid blue;
 
 } 
 
 .modal {
 
-    width: 450px;
-    height: 250px;
+    width: 695px;
+    height: 420px;
     border-radius: 5px;
     position: relative;
-    top: 40%;
-    left: 56%;
+    top: 20%;
+    left: 50%;
     background: white;
     border: 2px solid red;
 

@@ -5,9 +5,9 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-    <div id="header-ancre"></div>
+    <div id="header-anchor-receptor"></div>
     <header>
-            <a href="#header-ancre"><img src="../assets/images/../images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade"/></a>
+            <a href="#header-anchor-receptor" class="header-anchor"><img src="../assets/images/../images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade"/></a>
             <nav class="menu">
                 <ul>
                     <a href="#"><li>À propos de moi</li></a>
@@ -22,12 +22,18 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 
-#header-ancre {
+#header-anchor-receptor {
 
     height: 10px;
     width: 10px;
     position: absolute;
     top: 0;
+
+}
+
+.header-anchor {
+
+    height: 80px;
 
 }
 
@@ -37,19 +43,20 @@ header {
     position: sticky;
     top: 0;
     background-color: #ecdcc5ff;
+    
 
 }
 
 img {
 
     height: 60px;
-    padding: 10px;
+    padding: 12px 0 12px 0;
 
 }
 
 .menu {
 
-    width: 1183px;
+    width: 1366px;
 
 }
 
@@ -57,6 +64,12 @@ ul {
 
     display: flex;
     justify-content: space-between;
+    height: 40px;
+    width: 720px;
+    padding: 0;
+    margin: 22px 0 22px 0;
+    position: relative;
+    left: 655px;
 
 }
 
@@ -73,7 +86,7 @@ li {
     padding: 10px;
     font-family: 'Helvetica', 'sans-serif';
     font-weight: bold;
-    color: #ca9f6afe;
+    color: black;
     
 
 }
@@ -81,7 +94,8 @@ li {
 li:hover{
 
     
-    text-decoration: underline;
+    text-decoration: underline #31fffbff;
+    text-decoration-thickness: 8px;
 
 }
 </style>
