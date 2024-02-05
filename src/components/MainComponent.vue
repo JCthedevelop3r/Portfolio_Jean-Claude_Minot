@@ -1,5 +1,7 @@
 <script setup>
 
+import { RouterLink, RouterView } from 'vue-router';
+
 import ModalCV1 from '@/components/modals/ModalCV1.vue';
 
 import ModalCDC1 from '@/components/modals/ModalCDC1.vue';
@@ -78,10 +80,11 @@ const closeModalEspCom2 = () => {
 
 <template>
 
+    <div id="presentation"></div>
     <main>
 
         <!-- courte présentation -->
-        <p id="presentation">
+        <p class="presentation">
             Bonjour,<br/><br/> Je suis Jean-Claude Minot,<br/><br/> Développeur Web Junior.
         </p>
         <!-- courte présentation -->
@@ -100,15 +103,18 @@ const closeModalEspCom2 = () => {
             <div class="overlay-cv" @click="closeModalCV2">
                 <div class="modal-cv">
                     <button @click="closeModal" class="close-button-modals">X</button>
-                    <h1>Voici du contenu</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
-                    </p>
+                    <h1>Mon CV</h1>
+                    <ul>
+                        <li>Date de création : <time datetime="2023-11-16">16 novembre 2023</time>.</li>
+                        <li>Technologies utilisées : HTML 5 - CSS 3 - Github pour le versioning.</li>
+                        <li>Voir le projet : <a href="https://github.com/JCthedevelop3r/Devoir_CV" target="_blank">Un lien</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
         <!-- fenêtres modales du CV -->
         
+        <div id="cv"></div>
         <section class="main__section1">
             <article class="section__article1">
                 <h2 class="article1__h2">Mon CV</h2>
@@ -138,15 +144,17 @@ const closeModalEspCom2 = () => {
                 <div class="overlay-cdc" @click="closeModalCDC2">
                     <div class="modal-cdc">
                         <button @click="closeModal" class="close-button-modals">X</button>
-                        <h1>Voici du contenu</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
-                        </p>
+                        <h1>Cahier des charges</h1>
+                        <ul>
+                            <li>Date de création : <time datetime="2023-12-01">1er décembre 2023</time>.</li>
+                            <li>Technologies utilisées : OpenOffice Writer.</li>
+                            <li>Voir le projet : <router-link to="../assets/projects/Cahier_des_Charges_La_Socketterie.pdf" target="_blank">Un lien</router-link></li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <!-- fenêtres modales du cahier des charges -->
-
+            <div id="cdc"></div>
             <article class="section__article2">
                 <h2 class="article2__h2">Cahier des charges "La Socketterie"</h2>
                 <div class="article2__div">
@@ -174,15 +182,18 @@ const closeModalEspCom2 = () => {
                 <div class="overlay-esp-com" @click="closeModalEspCom2">
                     <div class="modal-esp-com">
                         <button @click="closeModal" class="close-button-modals">X</button>
-                        <h1>Voici du contenu</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
-                        </p>
+                        <h1>Dynamiser un espace commentaire</h1>
+                        <ul>
+                            <li>Date de création : <time datetime="2023-12-25">25 décembre 2023</time>.</li>
+                            <li>Technologies utilisées : JavaScript - HTML 5 - Github pour le versioning.</li>
+                            <li>Voir le projet : <a href="https://github.com/JCthedevelop3r/Devoir_Dynamiser_un_Espace_Commentaire" target="_blank">Un lien</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <!-- fenêtres modales de l'espace commentaire -->
 
+            <div id="esp-com"></div>
             <article class="section__article3">
                 <h2 class="article3__h2">Dynamiser un espace commentaire</h2>
                 <div class="article3__div">
@@ -198,18 +209,14 @@ const closeModalEspCom2 = () => {
 
         </section>
 
-        <h2 class="contact">Me contacter</h2>
+        <h2 id="contact">Me contacter</h2>
 
         <section class="main__section2">
 
             <!--texte de remerciements-->
             <p class="section2__p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
-                Proin consectetur, tortor at faucibus convallis, lorem nulla iaculis turpis, eget interdum est felis quis libero. 
-                Proin blandit fermentum est eu condimentum.
+                Merci de l'attention que vous avez porté à mes travaux.
             </p>
-
-            
 
             <form action="#" method="post">
 
@@ -241,6 +248,34 @@ const closeModalEspCom2 = () => {
 
     #presentation {
     
+        position: relative;
+        top: -100px;
+
+    }
+
+    #cv {
+    
+        position: relative;
+        top: -110px;
+    
+    }
+
+    #cdc {
+    
+        position: relative;
+        top: -60px;
+    
+    }
+
+    #esp-com {
+    
+        position: relative;
+        top: -60px;
+    
+    }
+
+    .presentation {
+    
         font-family: 'Bohemian Soul', serif;
         font-size: 4rem;
         height: 670px;
@@ -248,6 +283,8 @@ const closeModalEspCom2 = () => {
     }
 
     /*STYLE DE LA SECTION 1*/
+
+    /*TITRES DES TRAVAUX*/
     .article1__h2 {
     
         padding-left: 183px;
@@ -280,6 +317,8 @@ const closeModalEspCom2 = () => {
         color: black;
     
     }
+
+    /*TITRES DES TRAVAUX*/
 
     .article1__div {
     
@@ -425,7 +464,7 @@ const closeModalEspCom2 = () => {
     display: flex;
     justify-content: space-evenly;
     height: 800px; 
-    border: 2px solid blue;
+    
     
     }
 
@@ -434,7 +473,11 @@ const closeModalEspCom2 = () => {
         width: 400px;
         height: 500px;
         align-self: center;
-        border: 2px solid red;
+        font-family: 'Bohemian Soul', 'serif';
+        font-size: 3.8rem;
+        line-height: 1.84;
+        position: relative;
+        top: -28px;
     
     }
 
@@ -445,37 +488,55 @@ const closeModalEspCom2 = () => {
         display: flex;
         flex-direction: column;
         align-self: center;
-        border: 2px solid red;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+        
     }
 
     #firstname {
     
-    margin: 0 0 0 20px;
-    width: 313px;
+        width: 305px;
+        height: 25px;
+        position: relative;
+        left: 18px;
+        border: none;
+        border-radius: 8px;
+        background-color: black;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+        color: #31fffbff;
+        text-align: center;
     
     }
 
     #lastname {
     
-    width: 313px;
-    
+        width: 305px;
+        height: 25px;
+        position: relative;
+        left: 42px;
+        border: none;
+        border-radius: 8px;
+        background-color: black;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+        color: #31fffbff;
+        text-align: center;
     }
 
     #object {
     
-    width: 313px;
-    
-    }
-
-    #label-lastname {
-    
-        margin-right: 38px;
-    
-    }
-
-    #label-object {
-    
-        margin-right: 34px;
+        width: 305px;
+        height: 25px;
+        position: relative;
+        left: 41px;
+        border: none;
+        border-radius: 8px;
+        background-color: black;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+        color: #31fffbff;
+        text-align: center;
     
     }
 
@@ -489,19 +550,34 @@ const closeModalEspCom2 = () => {
     
         height: 320px;
         margin-bottom: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: black;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+        color: #31fffbff;
+        padding: 10px;
     
     }
 
     #submit-button {
     
         height: 40px;
-    
+        background: #31fffbff;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+        
     }
 
-    .contact {
+    #contact {
     
-        margin: 10px 0 10px 0;
-        padding-left: 735px;
+        position: absolute;
+        top: 3380px;
+        left: 1160px;
+        font-family: 'Arial', 'sans-serif';
+        font-weight: 900;
     
     }
     /*STYLE DE LA SECTION 2*/
@@ -515,6 +591,7 @@ const closeModalEspCom2 = () => {
     position: fixed;
     top: 0;
     left: 0;
+    
 
     } 
 
@@ -524,20 +601,37 @@ const closeModalEspCom2 = () => {
     width: 100vw;
     height: 100vh;
     background: #333333d3;
-
+    
     }
 
     .modal-cv {
 
-    width: 450px;
-    height: 250px;
-    border-radius: 5px;
-    position: absolute;
-    top: 25%;
-    left: 39%;
-    background: white;
-    border: 2px solid red;
+        width: 450px;
+        height: 250px;
+        border-radius: 10px;
+        position: absolute;
+        top: 25%;
+        left: 39%;
+        background: black;
+        border: 1px solid #31fffbff;
+        color: #31fffbff;
+        padding: 5px 30px 0 10px;
 
+    }
+
+    .modal-cv h1 {
+    
+        font-family: 'Arial', 'sans-serif';
+        padding-left: 20px;
+    
+    }
+
+    .modal-cv ul {
+    
+        line-height: 2;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+    
     }
 
     /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DU CV*/
@@ -571,9 +665,26 @@ const closeModalEspCom2 = () => {
     position: absolute;
     top: 25%;
     left: 39%;
-    background: white;
-    border: 2px solid red;
+    background: black;
+    border: 1px solid #31fffbff;
+    color: #31fffbff;
+    padding: 5px 30px 0 10px;
 
+    }
+
+    .modal-cdc h1 {
+    
+        font-family: 'Arial', 'sans-serif';
+        padding-left: 20px;
+    
+    }
+
+    .modal-cdc ul {
+    
+        line-height: 2;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+    
     }
 
     /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DU CAHIER DES CHARGES*/
@@ -607,9 +718,26 @@ const closeModalEspCom2 = () => {
     position: absolute;
     top: 25%;
     left: 39%;
-    background: white;
-    border: 2px solid red;
+    background: black;
+    border: 1px solid #31fffbff;
+    color: #31fffbff;
+    padding: 5px 30px 0 10px;
 
+    }
+
+    .modal-esp-com h1 {
+    
+        font-family: 'Arial', 'sans-serif';
+        padding-left: 20px;
+    
+    }
+
+    .modal-esp-com ul {
+    
+        line-height: 2;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+    
     }
 
     /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DE L'ESPACE COMMENTAIRE*/
@@ -631,10 +759,9 @@ const closeModalEspCom2 = () => {
     height: 667px;
     width: 492px;
     position: absolute;
-    top: -27%;
+    top: -28%;
     left: -101%;
-    opacity: 0.5;
-    
+    opacity: 0;
     }
 
     .close-modal-cdc-1 {
@@ -642,9 +769,9 @@ const closeModalEspCom2 = () => {
     height: 675px;
     width: 500px;
     position: absolute;
-    top: -31%;
+    top: -29%;
     left: -101%;
-    opacity: 0.5;
+    opacity: 0;
 
     }
 
@@ -653,9 +780,9 @@ const closeModalEspCom2 = () => {
     height: 675px;
     width: 500px;
     position: absolute;
-    top: -27%;
+    top: -29%;
     left: -101%;
-    opacity: 0.5;
+    opacity: 0;
 
     }
 

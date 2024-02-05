@@ -11,7 +11,7 @@
          <a href="https://twitter.com/JCthedevelop3r" target="_blank:"><img src="../assets/images/twitter.png" alt="logo de Twitter"/></a>
          <a href="" target="_blank:"><img src="../assets/images/linkedin.png" alt="logo de linkedin"/></a>
     </section>
-    <small><time datetime="" >Dernière mise à jour du site le xx xxxxxx xxxx</time></small>
+    <small><time datetime="2024-02-05" >Dernière mise à jour du site le 05 février 2024.</time></small>
  </footer>
 </template>
 
@@ -19,21 +19,23 @@
 
 footer {
 
-display: flex;
-justify-content: space-between;
-
+     display: flex;
+     justify-content: space-between;
+     font-family: 'Helvetica', 'sens-serif';
+     font-weight: bold;
 
 }
 
 img {
 
-width: 50px
+     width: 35px;
+     padding-right: 10px;
 
 }
 
 small {
 
-align-self: end
+     align-self: end
 
 }
 

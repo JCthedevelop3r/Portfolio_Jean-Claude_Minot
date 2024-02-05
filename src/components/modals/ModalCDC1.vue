@@ -17,7 +17,7 @@
 .modal-container {
 
     width: 1400px;
-    height: 800px;
+    height: 750px;
     position: absolute;
     top: 186%;
 

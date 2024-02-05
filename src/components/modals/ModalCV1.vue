@@ -17,7 +17,7 @@
 .modal-container {
 
     width: 1400px;
-    height: 800px;
+    height: 720px;
     position: absolute;
 
 } 
@@ -28,7 +28,7 @@
     height: 420px;
     border-radius: 5px;
     position: relative;
-    top: 20%;
+    top: 23%;
     left: 50%;
     background: white;
     border: 2px solid red;

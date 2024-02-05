@@ -10,11 +10,11 @@ import { RouterLink, RouterView } from 'vue-router'
             <a href="#header-anchor-receptor" class="header-anchor"><img src="../assets/images/../images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade"/></a>
             <nav class="menu">
                 <ul>
-                    <a href="#"><li>À propos de moi</li></a>
-                    <a href="#"><li>Mon CV</li></a>
-                    <a href="#"><li>Cahier des charges</li></a>
-                    <a href="#"><li>Espace commentaire</li></a>
-                    <a href="#"><li>Me contacter</li></a>
+                    <a href="#presentation"><li>À propos de moi</li></a>
+                    <a href="#cv"><li>Mon CV</li></a>
+                    <a href="#cdc"><li>Cahier des charges</li></a>
+                    <a href="#esp-com"><li>Espace commentaire</li></a>
+                    <a href="#contact"><li>Me contacter</li></a>
                 </ul>
             </nav>
     </header>
@@ -43,6 +43,7 @@ header {
     position: sticky;
     top: 0;
     background-color: #ecdcc5ff;
+    z-index: 1;
     
 
 }
