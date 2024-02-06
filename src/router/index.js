@@ -21,11 +21,11 @@ const router = createRouter({
       component: PDFComponent,
     },
 
-    /*{
+    {
       path: '/:pathMatch(.*)*',
       name: 'NotFound404',
       component: NotFound404,
-    }, */
+    },
     
   ],
 });
