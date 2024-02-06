@@ -27,12 +27,14 @@
 
     width: 695px;
     height: 420px;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
     top: 25%;
     left: 50%;
-    background: white;
-    border: 2px solid red;
+    background: black;
+    border: 1px solid #31fffbff;
+    color: #31fffbff;
+    overflow-y: scroll;
 
 }
 </style>

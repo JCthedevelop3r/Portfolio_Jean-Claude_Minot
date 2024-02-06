@@ -4,6 +4,7 @@ import  NotFound404  from '../views/NotFound404.vue'
 
 import Home from '../views/Home.vue'
 
+import PDFComponent from '../views/PDFComponent.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,15 +16,16 @@ const router = createRouter({
     },
 
     {
+      path: '/CahierDesChargesPDF',
+      name: 'PDFComponent',
+      component: PDFComponent,
+    },
+
+    /*{
       path: '/:pathMatch(.*)*',
       name: 'NotFound404',
       component: NotFound404,
-    }, 
-
-    {
-      path:'../assets/projects/Cahier_des_Charges_La_Socketterie.pdf',
-      
-    },
+    }, */
     
   ],
 });

@@ -92,10 +92,24 @@ const closeModalEspCom2 = () => {
         <!-- fenêtres modales du CV -->
         <ModalCV1 v-if="isModalOpenCV1">
             <button class="close-button-modals" @click="closeModalCV1">X</button>
-            <h1>Voici du contenu</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
-            </p>
+            <h2 class="ModalCV1__h2">Mon CV</h2>
+            <section class="ModalCV1__section">
+                <img src="../assets/images/CV_header.png" alt="En-tête d'un CV de développeur web junior" class="section__img"/>
+                <p class="section__p">
+                    Sur l'en-tête du CV, il est possible d'afficher ma photo sur un autre onglet en cliquant dessus. 
+                </p>
+                <img src="../assets/images/CV_effet_dynamique.png" alt="Partie de l'expérience professionnelle d'un CV" class="section__img"/>
+                <p class="section__p">
+                    Ici, une barre bordeaux apparaît à droite en fonction de la partie du CV sur laquelle se trouve le curseur. 
+                </p>
+                <img src="../assets/images/CV_lien_reseaux_sociaux.png" alt="Logos de réseaux sociaux" class="section__img"/>
+                <p class="section__p">
+                    Au niveau, du pied de page, on retrouve les logos de différents réseaux sociaux sur lesquels il est possible de cliquer pour
+                    voir mes profils professionnels sur un nouvel onglet. 
+                </p>
+                <p class="section__p">Pour plus de détails n'hésitez pas à cliquer sur "En savoir plus" pour avoir davantage d'information sur ce projet et pour y accéder.</p>
+
+            </section>
             <button class="close-modal-cv-1" @click="closeModalCV1">fermer</button>
         </ModalCV1>
 
@@ -107,7 +121,7 @@ const closeModalEspCom2 = () => {
                     <ul>
                         <li>Date de création : <time datetime="2023-11-16">16 novembre 2023</time>.</li>
                         <li>Technologies utilisées : HTML 5 - CSS 3 - Github pour le versioning.</li>
-                        <li>Voir le projet : <a href="https://github.com/JCthedevelop3r/Devoir_CV" target="_blank">Un lien</a></li>
+                        <li>Voir le projet : <a href="https://github.com/JCthedevelop3r/Devoir_CV" target="_blank">Mon CV.</a></li>
                     </ul>
                 </div>
             </div>
@@ -133,10 +147,27 @@ const closeModalEspCom2 = () => {
             <!-- fenêtres modales du cahier des charges -->
             <ModalCDC1 v-if="isModalOpenCDC1">
                 <button class="close-button-modals" @click="closeModalCDC1">X</button>
-                <h1>Voici du contenu</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
-                </p>
+                <section class="ModalCDC1__section">
+                    <h2 class="section__h2">Cahier des charges "La Socketterie"</h2>
+                    <img src="../assets/images/Sommaire_CDC.png" alt="Sommaire d'un cahier des charges" class="section__img"/>
+                    <p class="section__p">
+                        Le cahier des charges a été divisé en trois parties afin de l'organiser de façon cohérente. 
+                    </p>
+                    <img src="../assets/images/Partie_A_CDC.png" alt="Textes listant les objectifs d'un site web" class="section__img"/>
+                    <p class="section__p">
+                        La partie A liste les différents objectifs du site et le profil d'utilisateur ciblé. 
+                    </p>
+                    <img src="../assets/images/Partie_B_CDC.png" alt="Arborescence d'un site web" class="section__img"/>
+                    <p class="section__p">
+                        Ici, nous sommes à la partie B où j'ai entre autre schématisé l'arborescence du site web. 
+                    </p>
+                    <img src="../assets/images/Partie_C_CDC.png" alt="Planning de production d'un site web" class="section__img"/>
+                    <p class="section__p">
+                        Et enfin, la Partie C où j'ai notamment établit le planning de production du site en listant les différentes 
+                        étapes de production avec les périodes correspondantes. 
+                    </p>
+                    <p class="section__p">Pour plus de détails n'hésitez pas à cliquer sur "En savoir plus" pour avoir davantage d'information sur ce projet et pour y accéder.</p>
+                </section>
                 <button class="close-modal-cdc-1" @click="closeModalCDC1">fermer</button>
             </ModalCDC1>
 
@@ -144,11 +175,11 @@ const closeModalEspCom2 = () => {
                 <div class="overlay-cdc" @click="closeModalCDC2">
                     <div class="modal-cdc">
                         <button @click="closeModal" class="close-button-modals">X</button>
-                        <h1>Cahier des charges</h1>
+                        <h1>Cahier des charges "La Socketterie"</h1>
                         <ul>
                             <li>Date de création : <time datetime="2023-12-01">1er décembre 2023</time>.</li>
                             <li>Technologies utilisées : OpenOffice Writer.</li>
-                            <li>Voir le projet : <router-link to="../assets/projects/Cahier_des_Charges_La_Socketterie.pdf" target="_blank">Un lien</router-link></li>
+                            <li>Voir le projet : <router-link to="/CahierDesChargesPDF">Cahier des charges "La Socketterie".</router-link></li>
                         </ul>
                     </div>
                 </div>
@@ -159,7 +190,7 @@ const closeModalEspCom2 = () => {
                 <h2 class="article2__h2">Cahier des charges "La Socketterie"</h2>
                 <div class="article2__div">
                     <figure class="article2__figure1">
-                        <img src="../assets/images/Screen_Devoir_Cahier_des_Charges.png" alt="Cahier des charges" class="article2__cdc" @click="openModalCDC1"/>
+                        <img src="../assets/images/Screen_Devoir_Cahier_des_Charges.png" alt="Page de garde d'un cahier des charges" class="article2__cdc" @click="openModalCDC1"/>
                     </figure>
                     <figure class="article2__figure2">
                         <img src="../assets/images/Logo_Cascade_JCthedevelop3r.png" alt="Logo en forme de cascade turquoise" class="article2__logo"/>
@@ -171,10 +202,25 @@ const closeModalEspCom2 = () => {
             <!-- fenêtres modales de l'espace commentaire -->
             <ModalEspaceCommentaire1 v-if="isModalOpenEspCom1">
                 <button class="close-button-modals" @click="closeModalEspCom1">X</button>
-                <h1>Voici du contenu</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
-                </p>
+                <section class="ModalEspaceCommentaire1__section">
+                    <h2 class="section__h2">Dynamiser un espace commentaire</h2>
+                    <p class="section__p">
+                        Ce projet consistait principalement à permettre à un utilisateur d'ajouter un commentaire avec son nom, son prénom, 
+                        et son message inscris dans le formulaire, au sein de la liste de commentaire au clic du bouton "envoyer", et ceci suivant 
+                        le même modèle que les commentaires déjà présents.
+                    </p>
+                    <img src="../assets/images/Insertion_commentaire_Dynamiser_Esp_Com.png" alt="Espace commentaire d'un site web" class="section__img"/>
+                    <p class="section__p">
+                        Ici, on constate que le nouveau commentaire est correctement inséré dans la liste de commentaire.
+                    </p>
+                    <img src="../assets/images/Erreur_Dynamiser_Esp_Com.png" alt="Espace commentaire d'un site web avec un message d'erreur" class="section__img"/>
+                    <p class="section__p">
+                        Sur cette image, on remarque qu'un message d'erreur apparaît lorsqu'un champ du formulaire est vide.
+                    </p>
+                    <p class="section__p">
+                        Pour plus de détails n'hésitez pas à cliquer sur "En savoir plus" pour avoir davantage d'informations sur ce projet et pour y accéder.
+                    </p>
+                </section>
                 <button class="close-modal-esp-com-1" @click="closeModalEspCom1">fermer</button>
             </ModalEspaceCommentaire1>
 
@@ -186,7 +232,7 @@ const closeModalEspCom2 = () => {
                         <ul>
                             <li>Date de création : <time datetime="2023-12-25">25 décembre 2023</time>.</li>
                             <li>Technologies utilisées : JavaScript - HTML 5 - Github pour le versioning.</li>
-                            <li>Voir le projet : <a href="https://github.com/JCthedevelop3r/Devoir_Dynamiser_un_Espace_Commentaire" target="_blank">Un lien</a></li>
+                            <li>Voir le projet : <a href="https://github.com/JCthedevelop3r/Devoir_Dynamiser_un_Espace_Commentaire" target="_blank">Dynamiser un espace commentaire</a></li>
                         </ul>
                     </div>
                 </div>
@@ -341,7 +387,7 @@ const closeModalEspCom2 = () => {
     .article1__figure1 {
 
         width: 555px;
-        height: 670px;
+        height: 667px;
         margin: 0 0 15px 0;
     }
 
@@ -350,9 +396,19 @@ const closeModalEspCom2 = () => {
         height: 100%;
         width: 89%;
         object-fit: contain;
-        padding: 5px 5px 5px 0;
         border-radius: 25px;
     
+    }
+
+    .article1__cv:hover {
+    
+        height: 100%;
+        width: 89%;
+        object-fit: contain;
+        border-radius: 25px;
+        border-right: 5px solid black;
+        border-bottom: 5px solid black;
+        cursor: pointer;
     }
 
     .article2__figure1 {
@@ -372,6 +428,19 @@ const closeModalEspCom2 = () => {
     
     }
 
+    .article2__cdc:hover  {
+    
+        height: 100%;
+        width: 89%;
+        object-fit: cover;
+        border-radius: 25px;
+        border-right: 5px solid black;
+        border-bottom: 5px solid black;
+        cursor: pointer;
+        
+    
+    }
+
     .article3__figure1 {
 
     width: 555px;
@@ -386,6 +455,18 @@ const closeModalEspCom2 = () => {
         width: 89%;
         object-fit: cover;
         border-radius: 25px;
+    
+    }
+
+    .article3__esp-com:hover {
+    
+        height: 100%;
+        width: 89%;
+        object-fit: cover;
+        border-radius: 25px;
+        border-right: 5px solid black;
+        border-bottom: 5px solid black;
+        cursor: pointer;
     
     }
 
@@ -571,6 +652,18 @@ const closeModalEspCom2 = () => {
         
     }
 
+    #submit-button:hover {
+    
+        height: 40px;
+        background: #31fffbff;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+
     #contact {
     
         position: absolute;
@@ -753,37 +846,160 @@ const closeModalEspCom2 = () => {
         right: 10px;
 
     }
+
+    .close-button-modals:hover {
+    
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+
+    }
     
     .close-modal-cv-1 {
     
-    height: 667px;
-    width: 492px;
-    position: absolute;
-    top: -28%;
-    left: -101%;
-    opacity: 0;
+        height: 667px;
+        width: 492px;
+        position: absolute;
+        top: -28%;
+        left: -101%;
+        opacity: 0;
+    }
+
+    .close-modal-cv-1:hover {
+    
+        height: 667px;
+        width: 492px;
+        position: absolute;
+        top: -28%;
+        left: -101%;
+        opacity: 0.5;
+        cursor: pointer;
+    
     }
 
     .close-modal-cdc-1 {
     
-    height: 675px;
-    width: 500px;
-    position: absolute;
-    top: -29%;
-    left: -101%;
-    opacity: 0;
+        height: 675px;
+        width: 500px;
+        position: absolute;
+        top: -29%;
+        left: -101%;
+        opacity: 0;
+
+    }
+
+    .close-modal-cdc-1:hover {
+    
+        height: 675px;
+        width: 500px;
+        position: absolute;
+        top: -29%;
+        left: -101%;
+        opacity: 0;
+        cursor: pointer;
 
     }
 
     .close-modal-esp-com-1 {
     
-    height: 675px;
-    width: 500px;
-    position: absolute;
-    top: -29%;
-    left: -101%;
-    opacity: 0;
+        height: 675px;
+        width: 500px;
+        position: absolute;
+        top: -29%;
+        left: -101%;
+        opacity: 0;
 
+    }
+
+    .close-modal-esp-com-1:hover {
+    
+        height: 675px;
+        width: 500px;
+        position: absolute;
+        top: -29%;
+        left: -101%;
+        opacity: 0;
+        cursor: pointer;
+
+    }
+
+    .ModalCV1__h2 {
+    
+        font-family: 'Arial', 'sans-serif';
+        font-weight: 900;
+        position: relative;
+        left: 270px;
+        width: 150px;
+    
+    }
+
+    .ModalCV1__section {
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+    
+    }
+
+    .ModalCDC1__h2 {
+    
+        font-family: 'Arial', 'sans-serif';
+        font-weight: 900;
+        position: relative;
+        left: 270px;
+        width: 150px;
+    
+    }
+
+    .ModalCDC1__section {
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+    
+    }
+
+    .ModalEspaceCommentaire1__h2 {
+    
+        font-family: 'Arial', 'sans-serif';
+        font-weight: 900;
+        position: relative;
+        left: 270px;
+        width: 150px;
+    
+    }
+
+    .ModalEspaceCommentaire1__section {
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+    
+    }
+
+    .section__img {
+    
+        width: 400px;
+    
+    }
+
+    .section__p {
+    
+        width: 600px;
+        margin-bottom: 32px;
+        text-align: center;
+    
     }
 
 </style>
