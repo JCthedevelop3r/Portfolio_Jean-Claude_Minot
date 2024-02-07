@@ -83,17 +83,18 @@ const closeModalEspCom2 = () => {
     <div id="presentation"></div>
     <main>
 
-        <!-- courte présentation -->
         <p class="presentation">
-            Bonjour,<br/><br/> Je suis Jean-Claude Minot,<br/><br/> Développeur Web Junior.
+            Bonjour,<br/> Je suis Jean-Claude Minot,<br/> Développeur Web Junior.
         </p>
-        <!-- courte présentation -->
 
         <!-- fenêtres modales du CV -->
         <ModalCV1 v-if="isModalOpenCV1">
             <button class="close-button-modals" @click="closeModalCV1">X</button>
             <h2 class="ModalCV1__h2">Mon CV</h2>
             <section class="ModalCV1__section">
+                <p class="section__p">
+                    Pour ce devoir, je devais créer mon CV en respectant une maquette et intégrer des effets dynamiques et des liens externes.
+                </p>
                 <img src="../assets/images/CV_header.png" alt="En-tête d'un CV de développeur web junior" class="section__img"/>
                 <p class="section__p">
                     Sur l'en-tête du CV, il est possible d'afficher ma photo sur un autre onglet en cliquant dessus. 
@@ -108,9 +109,7 @@ const closeModalEspCom2 = () => {
                     voir mes profils professionnels sur un nouvel onglet. 
                 </p>
                 <p class="section__p">Pour plus de détails n'hésitez pas à cliquer sur "En savoir plus" pour avoir davantage d'information sur ce projet et pour y accéder.</p>
-
             </section>
-            <button class="close-modal-cv-1" @click="closeModalCV1">fermer</button>
         </ModalCV1>
 
         <div class="modal-container-cv" v-if="isModalOpenCV2">
@@ -141,14 +140,19 @@ const closeModalEspCom2 = () => {
                         <img src="../assets/images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade" class="article1__logo"/>
                     </figure>
                 </div>
-                <button @click="openModalCV2">En savoir plus</button>
+                <button @click="openModalCV2" class="en-savoir-plus">En savoir plus</button>
             </article>
 
             <!-- fenêtres modales du cahier des charges -->
             <ModalCDC1 v-if="isModalOpenCDC1">
                 <button class="close-button-modals" @click="closeModalCDC1">X</button>
+                <h2 class="ModalCDC1__h2">Cahier des charges "La Socketterie"</h2>
                 <section class="ModalCDC1__section">
-                    <h2 class="section__h2">Cahier des charges "La Socketterie"</h2>
+                    <p class="section__p">
+                        Le but de ce projet était de créer le cahier des charges du site web d'une entreprise fictive afin de créer 
+                        un site qui permette d'acheter les produits facilement, d'intégrer une zone d'avis sur les produits 
+                        et une partie "back-office" pour la gestion des stocks.
+                    </p>
                     <img src="../assets/images/Sommaire_CDC.png" alt="Sommaire d'un cahier des charges" class="section__img"/>
                     <p class="section__p">
                         Le cahier des charges a été divisé en trois parties afin de l'organiser de façon cohérente. 
@@ -168,7 +172,6 @@ const closeModalEspCom2 = () => {
                     </p>
                     <p class="section__p">Pour plus de détails n'hésitez pas à cliquer sur "En savoir plus" pour avoir davantage d'information sur ce projet et pour y accéder.</p>
                 </section>
-                <button class="close-modal-cdc-1" @click="closeModalCDC1">fermer</button>
             </ModalCDC1>
 
             <div class="modal-container-cdc" v-if="isModalOpenCDC2">
@@ -196,14 +199,14 @@ const closeModalEspCom2 = () => {
                         <img src="../assets/images/Logo_Cascade_JCthedevelop3r.png" alt="Logo en forme de cascade turquoise" class="article2__logo"/>
                     </figure>
                 </div>
-                <button @click="openModalCDC2">En savoir plus</button>
+                <button @click="openModalCDC2" class="en-savoir-plus">En savoir plus</button>
             </article>
 
             <!-- fenêtres modales de l'espace commentaire -->
             <ModalEspaceCommentaire1 v-if="isModalOpenEspCom1">
                 <button class="close-button-modals" @click="closeModalEspCom1">X</button>
+                <h2 class="ModalEspaceCommentaire1__h2">Dynamiser un espace commentaire</h2>
                 <section class="ModalEspaceCommentaire1__section">
-                    <h2 class="section__h2">Dynamiser un espace commentaire</h2>
                     <p class="section__p">
                         Ce projet consistait principalement à permettre à un utilisateur d'ajouter un commentaire avec son nom, son prénom, 
                         et son message inscris dans le formulaire, au sein de la liste de commentaire au clic du bouton "envoyer", et ceci suivant 
@@ -221,7 +224,6 @@ const closeModalEspCom2 = () => {
                         Pour plus de détails n'hésitez pas à cliquer sur "En savoir plus" pour avoir davantage d'informations sur ce projet et pour y accéder.
                     </p>
                 </section>
-                <button class="close-modal-esp-com-1" @click="closeModalEspCom1">fermer</button>
             </ModalEspaceCommentaire1>
 
             <div class="modal-container-esp-com" v-if="isModalOpenEspCom2">
@@ -250,7 +252,7 @@ const closeModalEspCom2 = () => {
                         <img src="../assets/images/Logo_Cascade_JCthedevelop3r.png" alt="Logo en forme de cascade turquoise" class="article3__logo"/>
                     </figure>
                 </div>
-                <button @click="openModalEspCom2">En savoir plus</button>
+                <button @click="openModalEspCom2" class="en-savoir-plus">En savoir plus</button>
             </article>
 
         </section>
@@ -259,7 +261,6 @@ const closeModalEspCom2 = () => {
 
         <section class="main__section2">
 
-            <!--texte de remerciements-->
             <p class="section2__p">
                 Merci de l'attention que vous avez porté à mes travaux.
             </p>
@@ -292,6 +293,7 @@ const closeModalEspCom2 = () => {
 
 <style scoped>
 
+    /*ANCRES DU HEADER*/
     #presentation {
     
         position: relative;
@@ -319,12 +321,14 @@ const closeModalEspCom2 = () => {
         top: -60px;
     
     }
+    /*ANCRES DU HEADER*/
 
     .presentation {
     
         font-family: 'Bohemian Soul', serif;
         font-size: 4rem;
         height: 670px;
+        line-height: 180px;
     
     }
 
@@ -355,7 +359,7 @@ const closeModalEspCom2 = () => {
 
     .article3__h2 {
     
-       padding: 40px 0 10px 0px;
+        padding: 40px 0 10px 0px;
         margin: 0;
         font-family: 'Arial', 'sans-serif';
         font-weight: 900;
@@ -443,9 +447,9 @@ const closeModalEspCom2 = () => {
 
     .article3__figure1 {
 
-    width: 555px;
-    height: 670px;
-    margin: 0 0 15px 0;
+        width: 555px;
+        height: 670px;
+        margin: 0 0 15px 0;
     
     }
 
@@ -518,23 +522,24 @@ const closeModalEspCom2 = () => {
     
     }
 
-    button {
+    .en-savoir-plus {
     
-    width: 495px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Helvetica', 'sans-serif';
-    font-weight: bold;
-    color: black;
-    background-color: #31fffbff;
+        width: 495px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Helvetica', 'sans-serif';
+        font-weight: bold;
+        color: black;
+        background-color: #31fffbff;
+        cursor: pointer;
     
     }
 
     .main__section1 {
     
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     
     }
     /*STYLE DE LA SECTION 1*/
@@ -542,9 +547,9 @@ const closeModalEspCom2 = () => {
     /*STYLE DE LA SECTION 2*/
     .main__section2 {
     
-    display: flex;
-    justify-content: space-evenly;
-    height: 800px; 
+        display: flex;
+        justify-content: space-evenly;
+        height: 800px; 
     
     
     }
@@ -649,19 +654,7 @@ const closeModalEspCom2 = () => {
         border-radius: 10px;
         font-family: 'Helvetica', 'sans-serif';
         font-weight: bold;
-        
-    }
-
-    #submit-button:hover {
-    
-        height: 40px;
-        background: #31fffbff;
-        border: none;
-        border-radius: 10px;
-        font-family: 'Helvetica', 'sans-serif';
-        font-weight: bold;
         cursor: pointer;
-        
     }
 
     #contact {
@@ -679,21 +672,20 @@ const closeModalEspCom2 = () => {
 
     .modal-container-cv {
 
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
     
-
     } 
 
     .overlay-cv {
 
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background: #333333d3;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: #333333d3;
     
     }
 
@@ -733,35 +725,35 @@ const closeModalEspCom2 = () => {
 
     .modal-container-cdc {
 
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
 
     } 
 
     .overlay-cdc {
 
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background: #333333d3;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: #333333d3;
 
     }
 
     .modal-cdc {
 
-    width: 450px;
-    height: 250px;
-    border-radius: 5px;
-    position: absolute;
-    top: 25%;
-    left: 39%;
-    background: black;
-    border: 1px solid #31fffbff;
-    color: #31fffbff;
-    padding: 5px 30px 0 10px;
+        width: 450px;
+        height: 250px;
+        border-radius: 5px;
+        position: absolute;
+        top: 25%;
+        left: 39%;
+        background: black;
+        border: 1px solid #31fffbff;
+        color: #31fffbff;
+        padding: 5px 30px 0 10px;
 
     }
 
@@ -786,35 +778,35 @@ const closeModalEspCom2 = () => {
 
     .modal-container-esp-com {
 
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
 
     } 
 
     .overlay-esp-com {
 
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background: #333333d3;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: #333333d3;
 
     }
 
     .modal-esp-com {
 
-    width: 450px;
-    height: 250px;
-    border-radius: 5px;
-    position: absolute;
-    top: 25%;
-    left: 39%;
-    background: black;
-    border: 1px solid #31fffbff;
-    color: #31fffbff;
-    padding: 5px 30px 0 10px;
+        width: 450px;
+        height: 250px;
+        border-radius: 5px;
+        position: absolute;
+        top: 25%;
+        left: 39%;
+        background: black;
+        border: 1px solid #31fffbff;
+        color: #31fffbff;
+        padding: 5px 30px 0 10px;
 
     }
 
@@ -835,6 +827,7 @@ const closeModalEspCom2 = () => {
 
     /*STYLE DE LA FENETRE MODALE "EN SAVOIR PLUS" DE L'ESPACE COMMENTAIRE*/
     
+    /*STYLE DES FENÊTRES MODALES 1*/
     .close-button-modals {
     
         width: 30px;
@@ -844,88 +837,8 @@ const closeModalEspCom2 = () => {
         position: absolute;
         top: 10px;
         right: 10px;
-
-    }
-
-    .close-button-modals:hover {
-    
-        width: 30px;
-        height: 30px;
-        border: none;
-        border-radius: 5px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
+        background: #31fffbff;
         cursor: pointer;
-
-    }
-    
-    .close-modal-cv-1 {
-    
-        height: 667px;
-        width: 492px;
-        position: absolute;
-        top: -28%;
-        left: -101%;
-        opacity: 0;
-    }
-
-    .close-modal-cv-1:hover {
-    
-        height: 667px;
-        width: 492px;
-        position: absolute;
-        top: -28%;
-        left: -101%;
-        opacity: 0.5;
-        cursor: pointer;
-    
-    }
-
-    .close-modal-cdc-1 {
-    
-        height: 675px;
-        width: 500px;
-        position: absolute;
-        top: -29%;
-        left: -101%;
-        opacity: 0;
-
-    }
-
-    .close-modal-cdc-1:hover {
-    
-        height: 675px;
-        width: 500px;
-        position: absolute;
-        top: -29%;
-        left: -101%;
-        opacity: 0;
-        cursor: pointer;
-
-    }
-
-    .close-modal-esp-com-1 {
-    
-        height: 675px;
-        width: 500px;
-        position: absolute;
-        top: -29%;
-        left: -101%;
-        opacity: 0;
-
-    }
-
-    .close-modal-esp-com-1:hover {
-    
-        height: 675px;
-        width: 500px;
-        position: absolute;
-        top: -29%;
-        left: -101%;
-        opacity: 0;
-        cursor: pointer;
-
     }
 
     .ModalCV1__h2 {
@@ -953,8 +866,8 @@ const closeModalEspCom2 = () => {
         font-family: 'Arial', 'sans-serif';
         font-weight: 900;
         position: relative;
-        left: 270px;
-        width: 150px;
+        left: 110px;
+        width: 550px;
     
     }
 
@@ -973,8 +886,8 @@ const closeModalEspCom2 = () => {
         font-family: 'Arial', 'sans-serif';
         font-weight: 900;
         position: relative;
-        left: 270px;
-        width: 150px;
+        left: 110px;
+        width: 550px;
     
     }
 
@@ -1001,5 +914,7 @@ const closeModalEspCom2 = () => {
         text-align: center;
     
     }
+
+    /*STYLE DES FENÊTRES MODALES 1*/
 
 </style>

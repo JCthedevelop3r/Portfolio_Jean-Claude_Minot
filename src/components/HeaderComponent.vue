@@ -1,22 +1,20 @@
 <script setup>
 
-import { RouterLink, RouterView } from 'vue-router'
-
 </script>
 
 <template>
     <div id="header-anchor-receptor"></div>
     <header>
-            <a href="#header-anchor-receptor" class="header-anchor"><img src="../assets/images/../images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade"/></a>
-            <nav class="menu">
-                <ul>
-                    <a href="#presentation"><li>À propos de moi</li></a>
-                    <a href="#cv"><li>Mon CV</li></a>
-                    <a href="#cdc"><li>Cahier des charges</li></a>
-                    <a href="#esp-com"><li>Espace commentaire</li></a>
-                    <a href="#contact"><li>Me contacter</li></a>
-                </ul>
-            </nav>
+        <a href="#header-anchor-receptor" class="header-anchor"><img src="../assets/images/../images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade"/></a>
+        <nav class="menu">
+            <ul>
+                <a href="#presentation"><li>À propos de moi</li></a>
+                <a href="#cv"><li>Mon CV</li></a>
+                <a href="#cdc"><li>Cahier des charges</li></a>
+                <a href="#esp-com"><li>Espace commentaire</li></a>
+                <a href="#contact"><li>Me contacter</li></a>
+            </ul>
+        </nav>
     </header>
 </template>
 

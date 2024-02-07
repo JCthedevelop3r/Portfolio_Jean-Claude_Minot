@@ -54,8 +54,8 @@ import FooterComponent from '@/components/FooterComponent.vue'
 
     #last-home-button {
     
-    position: relative;
-    left: 1150px;
+        position: relative;
+        left: 1150px;
     
     }
 </style>

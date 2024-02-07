@@ -1,5 +1,4 @@
 <script setup>
-/*import { RouterLink, RouterView } from 'vue-router'*/
 
 </script>
 
@@ -10,7 +9,7 @@
                <a href="https://twitter.com/JCthedevelop3r" target="_blank:"><img src="../assets/images/twitter.png" alt="logo de Twitter"/></a>
                <a href="https://www.linkedin.com/in/jean-claude-minot-a894b6210/" target="_blank:"><img src="../assets/images/linkedin.png" alt="logo de linkedin"/></a>
           </section>
-    <small><time datetime="2024-02-05" >Dernière mise à jour du site le 05 février 2024.</time></small>
+          <small><time datetime="2024-02-07" >Dernière mise à jour du site le 07 février 2024.</time></small>
      </footer>
 </template>
 
@@ -28,13 +27,20 @@ footer {
 img {
 
      width: 35px;
-     padding-right: 10px;
+     margin-right: 10px;
+     border-radius: 5px;
 
 }
 
 small {
 
      align-self: end
+
+}
+
+a:hover {
+
+     opacity: 0.7;
 
 }
 

@@ -1,14 +1,17 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 
+    import { RouterLink, RouterView } from 'vue-router'
 
 </script>
 
-<template>    
-        <router-view/>
+<template>
+
+    <router-view/>
+
 </template>
 
 <style>
+
     @font-face {
     
         font-family: 'Bohemian Soul';
