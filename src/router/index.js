@@ -4,7 +4,7 @@ import  NotFound404  from '../views/NotFound404.vue'
 
 import Home from '../views/Home.vue'
 
-
+import PDFComponent from '../views/PDFComponent.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,9 +15,14 @@ const router = createRouter({
       component: Home,
     },
 
-    //Catchall 404
     {
-      path: '/:catchAll(.*)',
+      path: '/CahierDesChargesPDF',
+      name: 'PDFComponent',
+      component: PDFComponent,
+    },
+
+    {
+      path: '/:pathMatch(.*)*',
       name: 'NotFound404',
       component: NotFound404,
     },

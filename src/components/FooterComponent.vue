@@ -1,38 +1,46 @@
 <script setup>
-/*import { RouterLink, RouterView } from 'vue-router'*/
 
 </script>
 
 <template>
-    <footer>
-   <!--Penser à remplir le dernier href-->
-    <section>
-         <a href="https://github.com/" target="_blank:"><img src="../assets/images/signe-github.png" alt="logo de Github"/></a>
-         <a href="https://twitter.com/JCthedevelop3r" target="_blank:"><img src="../assets/images/twitter.png" alt="logo de Twitter"/></a>
-         <a href="" target="_blank:"><img src="../assets/images/linkedin.png" alt="logo de linkedin"/></a>
-    </section>
-    <small><time datetime="" >Dernière mise à jour du site le xx xxxxxx xxxx</time></small>
- </footer>
+     <footer>
+          <section>
+               <a href="https://github.com/" target="_blank:"><img src="../assets/images/signe-github.png" alt="logo de Github"/></a>
+               <a href="https://twitter.com/JCthedevelop3r" target="_blank:"><img src="../assets/images/twitter.png" alt="logo de Twitter"/></a>
+               <a href="https://www.linkedin.com/in/jean-claude-minot-a894b6210/" target="_blank:"><img src="../assets/images/linkedin.png" alt="logo de linkedin"/></a>
+          </section>
+          <small><time datetime="2024-02-07" >Dernière mise à jour du site le 07 février 2024.</time></small>
+     </footer>
 </template>
 
 <style scoped>
 
 footer {
 
-display: flex;
-justify-content: space-between;
+     display: flex;
+     justify-content: space-between;
+     font-family: 'Helvetica', 'sens-serif';
+     font-weight: bold;
 
 }
 
 img {
 
-width: 50px
+     width: 35px;
+     margin-right: 10px;
+     border-radius: 5px;
 
 }
 
 small {
 
-align-self: end
+     align-self: end
+
+}
+
+a:hover {
+
+     opacity: 0.7;
 
 }
 

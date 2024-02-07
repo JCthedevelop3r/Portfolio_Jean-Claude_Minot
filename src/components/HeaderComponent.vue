@@ -1,50 +1,100 @@
 <script setup>
 
-import { RouterLink, RouterView } from 'vue-router'
-
 </script>
 
 <template>
+    <div id="header-anchor-receptor"></div>
     <header>
-        <a href="#pdp"><img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="pdp"/></a>
-        <div class="name-and-menu">
-            <h1>Minot Jean-Claude</h1>
-            <div id="nav">
-                <router-link to="/About">À propos de moi</router-link>
-                <router-link to="/CV">CV</router-link>
-                <router-link to="/CDC">Cahier des charges</router-link>
-                <router-link to="/EspCom">Espace commentaire</router-link>
-                <router-link to="/Form">Me contacter</router-link>
-            </div>
-        </div>
+        <a href="#header-anchor-receptor" class="header-anchor"><img src="../assets/images/../images/Logo_Cascade_JCthedevelop3r.png" alt="Logo turquoise en forme de cascade"/></a>
+        <nav class="menu">
+            <ul>
+                <a href="#presentation"><li>À propos de moi</li></a>
+                <a href="#cv"><li>Mon CV</li></a>
+                <a href="#cdc"><li>Cahier des charges</li></a>
+                <a href="#esp-com"><li>Espace commentaire</li></a>
+                <a href="#contact"><li>Me contacter</li></a>
+            </ul>
+        </nav>
     </header>
 </template>
 
 <style scoped>
 
-.pdp {
+#header-anchor-receptor {
 
-height: 200px;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 0;
+
+}
+
+.header-anchor {
+
+    height: 80px;
 
 }
 
 header {
 
-display: flex;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #ecdcc5ff;
+    z-index: 1;
+    
 
 }
 
-.name-and-menu {
+img {
 
-display: flex;
-flex-direction: column;
+    height: 60px;
+    padding: 12px 0 12px 0;
 
+}
+
+.menu {
+
+    width: 1366px;
+
+}
+
+ul {
+
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 720px;
+    padding: 0;
+    margin: 22px 0 22px 0;
+    position: relative;
+    left: 655px;
+
+}
+
+a {
+
+    /*display: flex;
+    justify-content: center;
+    width: 170.5px;*/
 }
 
 li {
 
-display: inline-block;
+    display: inline-block;
+    padding: 10px;
+    font-family: 'Helvetica', 'sans-serif';
+    font-weight: bold;
+    color: black;
+    
 
 }
 
+li:hover{
+
+    
+    text-decoration: underline #31fffbff;
+    text-decoration-thickness: 8px;
+
+}
 </style>

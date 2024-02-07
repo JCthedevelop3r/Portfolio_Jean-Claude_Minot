@@ -16,23 +16,24 @@
 
 .modal-container {
 
-    width: 1300px;
-    height: 800px;
+    width: 1400px;
+    height: 720px;
     position: absolute;
-    border: 2px solid blue;
 
 } 
 
 .modal {
 
-    width: 450px;
-    height: 250px;
-    border-radius: 5px;
+    width: 695px;
+    height: 420px;
+    border-radius: 10px;
     position: relative;
-    top: 40%;
-    left: 56%;
-    background: white;
-    border: 2px solid red;
-
+    top: 23%;
+    left: 50%;
+    background: black;
+    border: 1px solid #31fffbff;
+    color: #31fffbff;
+    overflow-y: scroll;
+    
 }
 </style>
