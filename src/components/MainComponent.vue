@@ -1,54 +1,201 @@
 <script setup>
 
+import ModalCV1 from '@/components/modals/ModalCV1.vue';
+
+import ModalCDC1 from '@/components/modals/ModalCDC1.vue';
+
+import ModalEspaceCommentaire1 from '@/components/modals/ModalEspaceCommentaire1.vue';
+
+import { ref } from 'vue';
+
+//Code pour la ModalCV1
+const isModalOpenCV1 = ref(false);
+
+const openModalCV1 = () => {
+    isModalOpenCV1.value = true;
+};
+
+const closeModalCV1 = () => {
+    isModalOpenCV1.value = false;
+};
+
+//Code pour la ModalCV2
+const isModalOpenCV2 = ref(false);
+
+const openModalCV2 = () => {
+    isModalOpenCV2.value = true;
+};
+
+const closeModalCV2 = () => {
+    isModalOpenCV2.value = false;
+};
+
+//Code pour la ModalCDC1
+const isModalOpenCDC1 = ref(false);
+
+const openModalCDC1 = () => {
+    isModalOpenCDC1.value = true;
+};
+
+const closeModalCDC1 = () => {
+    isModalOpenCDC1.value = false;
+};
+
+//Code pour la ModalCDC2
+const isModalOpenCDC2 = ref(false);
+
+const openModalCDC2 = () => {
+    isModalOpenCDC2.value = true;
+};
+
+const closeModalCDC2 = () => {
+    isModalOpenCDC2.value = false;
+};
+
+//Code pour la ModalEspCom1
+const isModalOpenEspCom1 = ref(false);
+
+const openModalEspCom1 = () => {
+    isModalOpenEspCom1.value = true;
+};
+
+const closeModalEspCom1 = () => {
+    isModalOpenEspCom1.value = false;
+};
+
+//Code pour la ModalEspCom2
+const isModalOpenEspCom2 = ref(false);
+
+const openModalEspCom2 = () => {
+    isModalOpenEspCom2.value = true;
+};
+
+const closeModalEspCom2 = () => {
+    isModalOpenEspCom2.value = false;
+};
 
 </script>
 
 <template>
+
     <main>
+
         <!-- courte présentation -->
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
             Proin consectetur, tortor at faucibus convallis, lorem nulla iaculis turpis, eget interdum est felis quis libero. 
             Proin blandit fermentum est eu condimentum.
         </p>
+        <!-- courte présentation -->
+
+        <!-- fenêtres modales du CV -->
+        <ModalCV1 v-if="isModalOpenCV1">
+            <button class="close-button-modals" @click="closeModalCV1">X</button>
+            <h1>Voici du contenu</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
+            </p>
+            <button class="close-modal-cv-1" @click="closeModalCV1">fermer</button>
+        </ModalCV1>
+
+        <div class="modal-container-cv" v-if="isModalOpenCV2">
+            <div class="overlay-cv" @click="closeModalCV2">
+                <div class="modal-cv">
+                    <button @click="closeModal" class="close-button-modals">X</button>
+                    <h1>Voici du contenu</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- fenêtres modales du CV -->
+        
         <section class="main__section1">
             <article class="section__article1">
                 <h2 class="article1__h2">Mon CV</h2>
-                <div>
+                <div class="article1__div">
                     <figure class="article1__figure1">
-                        <img src="../assets/images/Screen_Devoir_CV.png" alt="Curriculum vitae d'un développeur web junior" class="article1__cv"/>
+                        <img src="../assets/images/Screen_Devoir_CV.png" alt="Curriculum vitae d'un développeur web junior" class="article1__cv" @click="openModalCV1"/>
                     </figure>
+                    
                     <figure class="article1__figure2">
                         <img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="article1__logo"/>
                     </figure>
                 </div>
-                <button>En savoir plus</button>
+                <button @click="openModalCV2">En savoir plus</button>
             </article>
+
+            <!-- fenêtres modales du cahier des charges -->
+            <ModalCDC1 v-if="isModalOpenCDC1">
+                <button class="close-button-modals" @click="closeModalCDC1">X</button>
+                <h1>Voici du contenu</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
+                </p>
+                <button class="close-modal-cdc-1" @click="closeModalCDC1">fermer</button>
+            </ModalCDC1>
+
+            <div class="modal-container-cdc" v-if="isModalOpenCDC2">
+                <div class="overlay-cdc" @click="closeModalCDC2">
+                    <div class="modal-cdc">
+                        <button @click="closeModal" class="close-button-modals">X</button>
+                        <h1>Voici du contenu</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- fenêtres modales du cahier des charges -->
 
             <article class="section__article2">
                 <h2 class="article2__h2">Cahier des charges "La Socketterie"</h2>
-                <div>
+                <div class="article2__div">
                     <figure class="article2__figure1">
-                        <img src="../assets/images/Screen_Devoir_Cahier_des_Charges.png" alt="Cahier des charges" class="article2__cdc"/>
+                        <img src="../assets/images/Screen_Devoir_Cahier_des_Charges.png" alt="Cahier des charges" class="article2__cdc" @click="openModalCDC1"/>
                     </figure>
                     <figure class="article2__figure2">
                         <img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="article2__logo"/>
                     </figure>
                 </div>
-                <button>En savoir plus</button>
+                <button @click="openModalCDC2">En savoir plus</button>
             </article>
+
+            <!-- fenêtres modales de l'espace commentaire -->
+            <ModalEspaceCommentaire1 v-if="isModalOpenEspCom1">
+                <button class="close-button-modals" @click="closeModalEspCom1">X</button>
+                <h1>Voici du contenu</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
+                </p>
+                <button class="close-modal-esp-com-1" @click="closeModalEspCom1">fermer</button>
+            </ModalEspaceCommentaire1>
+
+            <div class="modal-container-esp-com" v-if="isModalOpenEspCom2">
+                <div class="overlay-esp-com" @click="closeModalEspCom2">
+                    <div class="modal-esp-com">
+                        <button @click="closeModal" class="close-button-modals">X</button>
+                        <h1>Voici du contenu</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eros nisl, fringilla ut neque id, pharetra semper urna. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- fenêtres modales de l'espace commentaire -->
 
             <article class="section__article3">
                 <h2 class="article3__h2">Dynamiser un espace commentaire</h2>
-                <div>
+                <div class="article3__div">
                     <figure class="article3__figure1">
-                        <img src="../assets/images/Screen_Devoir_Dynamiser_Espace_commentaire.png" alt="Espace commentaire d'un site web" class="article3__esp-com"/>
+                        <img src="../assets/images/Screen_Devoir_Dynamiser_Espace_commentaire.png" alt="Espace commentaire d'un site web" class="article3__esp-com" @click="openModalEspCom1"/>
                     </figure>
                     <figure class="article3__figure2">
                         <img src="../assets/images/Pdp_moi.jpg" alt="Jeune homme brun au teint mate" class="article3__logo"/>
                     </figure>
                 </div>
-                <button>En savoir plus</button>
+                <button @click="openModalEspCom2">En savoir plus</button>
             </article>
 
         </section>
@@ -112,7 +259,19 @@
     
     }
 
-    div {
+    .article1__div {
+    
+    display: flex;
+    
+    }
+
+    .article2__div {
+    
+    display: flex;
+    
+    }
+
+    .article3__div {
     
     display: flex;
     
@@ -130,6 +289,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+    border: 2px solid red;
     
     }
 
@@ -145,6 +305,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        border: 2px solid red;
     
     }
 
@@ -160,6 +321,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        border: 2px solid red;
     
     }
 
@@ -308,5 +470,158 @@
         margin: 10px 0 10px 0;
         padding-left: 735px;
     
+    }
+
+    .close-button-modals {
+    
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+    }
+
+    /*Style de la fenêtre modale "En savoir plus" du CV*/
+
+    .modal-container-cv {
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    } 
+
+    .overlay-cv {
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #333333d3;
+
+    }
+
+    .modal-cv {
+
+    width: 450px;
+    height: 250px;
+    border-radius: 5px;
+    position: absolute;
+    top: 25%;
+    left: 39%;
+    background: white;
+    border: 2px solid red;
+
+    }
+
+    /*Style de la fenêtre modale "En savoir plus" du CV*/
+
+    /*Style de la fenêtre modale "En savoir plus" du Cahier des charges*/
+
+    .modal-container-cdc {
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    } 
+
+    .overlay-cdc {
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #333333d3;
+
+    }
+
+    .modal-cdc {
+
+    width: 450px;
+    height: 250px;
+    border-radius: 5px;
+    position: absolute;
+    top: 25%;
+    left: 39%;
+    background: white;
+    border: 2px solid red;
+
+    }
+
+    /*Style de la fenêtre modale "En savoir plus" du Cahier des charges*/
+
+    /*Style de la fenêtre modale "En savoir plus" de l'Espace commentaire*/
+
+    .modal-container-esp-com {
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    } 
+
+    .overlay-esp-com {
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #333333d3;
+
+    }
+
+    .modal-esp-com {
+
+    width: 450px;
+    height: 250px;
+    border-radius: 5px;
+    position: absolute;
+    top: 25%;
+    left: 39%;
+    background: white;
+    border: 2px solid red;
+
+    }
+
+    /*Style de la fenêtre modale "En savoir plus" de l'Espace commentaire*/
+
+    .close-modal-cv-1 {
+    
+    height: 752px;
+    width: 555px;
+    position: absolute;
+    top: -97%;
+    left: -150%;
+    opacity: 0.5;
+    
+    }
+
+    .close-modal-cdc-1 {
+    
+    height: 752px;
+    width: 600px;
+    position: absolute;
+    top: -100%;
+    left: -155%;
+    opacity: 0.5;
+
+    }
+
+    .close-modal-esp-com-1 {
+    
+    height: 752px;
+    width: 600px;
+    position: absolute;
+    top: -95%;
+    left: -155%;
+    opacity: 0.5;
+
     }
 </style>
