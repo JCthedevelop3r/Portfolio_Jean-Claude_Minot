@@ -1,29 +1,27 @@
 # Projet-Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Ce fichier vous donnera les instructions d'installation et de lancement de ce projet.
 
-## Recommended IDE Setup
+## Pré-requis
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Les pré-requis à la création de ce projet sont l'acquisition des bases des technologies suivantes : HTML 5, CSS 3, JavaScript, Git et GitHub.
 
-## Customize configuration
+## Installations d'IDE recommandées
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + (https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
 
-## Project Setup
+## Personnaliser la configuration
 
-```sh
-npm install
-```
+See[Vite Configuration Reference] (https://vitejs.dev/config/)
 
-### Compile and Hot-Reload for Development
+## Instructions d'installation
 
-```sh
-npm run dev
-```
+Installez le logiciel [Node.js](https://nodejs.org/en/download/current) afin d'installer le gestionnaire de paquets npm par la même occasion.
 
-### Compile and Minify for Production
+## Configuration de npm
 
-```sh
-npm run build
-```
+Dans l'invite de commande où dans un terminal, tapez : npm install.
+
+## Instructions de lancement / Compilez le programme dans le navigateur et recharger instantanément pour le développement
+
+Dans un terminal, tapez : npm run dev.
