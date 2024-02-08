@@ -9,16 +9,16 @@ import FooterComponent from '@/components/FooterComponent.vue'
 <template>
     <HeaderComponent></HeaderComponent>
     <button><router-link to="/">Retourner à l'accueil</router-link></button>
-    <img src="../assets/images/CDC_Page_1.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_2.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_3.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_4.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_5.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_6.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_7.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_8.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_9.jpg" alt="Page de garde d'un cahier des charges"></img>
-    <img src="../assets/images/CDC_Page_10.jpg" alt="Page de garde d'un cahier des charges"></img>
+    <img src="../assets/images/CDC_Page_1.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_2.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_3.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_4.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_5.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_6.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_7.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_8.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_9.jpg" alt="Page de garde d'un cahier des charges"/>
+    <img src="../assets/images/CDC_Page_10.jpg" alt="Page de garde d'un cahier des charges"/>
     <button id="last-home-button"><router-link to="/">Retourner à l'accueil</router-link></button>
     <FooterComponent></FooterComponent>
 </template>

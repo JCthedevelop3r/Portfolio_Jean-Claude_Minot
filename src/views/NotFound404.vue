@@ -11,7 +11,7 @@ import FooterComponent from '../components/FooterComponent.vue'
         <h1>Page introuvable</h1>
         <section>
             <p>Erreur 404</p>
-            <img src="../assets/images/Oops!.png" alt="Dessin d'un bonhomme confus"></img>
+            <img src="../assets/images/Oops!.png" alt="Dessin d'un bonhomme confus"/>
             <button><router-link to="/">Retourner à l'accueil</router-link></button>
         </section>
     <FooterComponent></FooterComponent>
